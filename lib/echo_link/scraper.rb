@@ -42,15 +42,25 @@ module EchoLink
           power: tds[7].text,
           haat: tds[8].text,
           antenna: tds[9].text,
-          status: tds[10].text,
+          status: clean_status(tds[10].text),
           comment: tds[11].text,
-          status_last_update_at: tds[12].text
+          status_updated_at: tds[12].text
         }
       end
       links
     end
 
     private
+
+      def clean_status(status)
+        case status.downcase
+        when 'off' then 'offline'
+        when 'conn' then 'connected'
+        when 'online' then 'online'
+        else
+          'unknown'
+        end
+      end
 
       def curl(url)
         http = Curl.get(url) do |http|
