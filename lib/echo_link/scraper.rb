@@ -23,6 +23,8 @@ module EchoLink
 
         html = html(page_url)
         links += links_from_table(html.css('table')[5])
+
+        sleep 1
       end
       links
     end
@@ -34,7 +36,8 @@ module EchoLink
         tds = tr.css('td')
         links << {
           id: tds[2].text.to_i,
-          call_sign: tds[0].text.gsub('\r\n',''),
+          call_sign: tds[0].text.gsub('\r','').gsub('\n',''),
+          description: tds[2].text,
           location: tds[3].text,
           grid: tds[4].text,
           frequency: tds[5].text,
