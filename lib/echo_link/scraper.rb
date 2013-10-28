@@ -34,7 +34,7 @@ module EchoLink
         tds = tr.css('td')
         links << {
           id: tds[2].text.to_i,
-          call_sign: tds[0].text,
+          call_sign: tds[0].text.gsub(/[\r\n]+/,//),
           location: tds[3].text,
           grid: tds[4].text,
           frequency: tds[5].text,
