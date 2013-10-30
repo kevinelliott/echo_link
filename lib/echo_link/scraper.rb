@@ -34,11 +34,17 @@ module EchoLink
       table.css('tr').each_with_index do |tr, i|
         next if i == 0
         tds = tr.css('td')
+
+        href = tds[0].css('b a').first.attr('href')
+        latlong = /^javascript:windowOpener\('googleMap\.jsp.+\|(?<latitude>.+)\|(?<longitude>.+)'\);$/
+        (latitude, longitude) = href.match(latlong)[1, 2]
+
         links << {
           id: tds[2].text.to_i,
-          call_sign: tds[0].text.gsub('\r','').gsub('\n',''),
-          description: tds[2].text,
-          location: tds[3].text,
+          call_sign: tds[0].text.strip,
+          description: tds[1].text.chars.select{|i| i.valid_encoding?}.join,
+          latitude: latitude.to_f,
+          longitude: longitude.to_f,
           grid: tds[4].text,
           frequency: tds[5].text,
           tone_squelch: tds[6].text,
