@@ -6,6 +6,8 @@ Retrieve information from the EchoLink network, such as link status and logins.
 
 The [EchoLink](http://www.echolink.org/) is a network of amateur radio repeaters and software clients that are linked together across regions via the Internet using VoIP. The EchoLink allows people to make contact with others across the world without needing long distance (DX) equipment and licenses.
 
+Related: See [kevinelliott/irlp](https://github.com/kevinelliott/irlp) and [kevinelliott/call_sign](https://github.com/kevinelliott/call_sign)
+
 ## Installation
 
 Add this line to your application's Gemfile:
