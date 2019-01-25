@@ -1,5 +1,6 @@
 # echo_link
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/kevinelliott/echo_link?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkevinelliott%2Fecho_link.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkevinelliott%2Fecho_link?ref=badge_shield)
 
 [![Gem Version](https://badge.fury.io/rb/echo_link.png)](http://badge.fury.io/rb/echo_link)
 
@@ -43,3 +44,7 @@ which returns an `Array` of `Hash`es similar to:
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkevinelliott%2Fecho_link.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkevinelliott%2Fecho_link?ref=badge_large)
